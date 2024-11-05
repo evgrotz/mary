@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .profile-header {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .profile-info p {
+      margin: 0;
+      padding: 0.2rem 0;
+    }
+
+    .tech-skill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tech-bar {
+      width: 100%;
+      height: 5px;
+      background-color: #555;
+      margin-left: 10px;
+    }
+
+    .image-section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      /* Centraliza a logo e o texto verticalmente */
+    }
+
+    .navbar .logo {
+      width: auto;
+      height: 60px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .brand-text {
+      font-size: 1.7rem;
+      /* Ajuste do tamanho do texto, se necessário */
+      color: #f3884a;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/image/logo.png" alt="Logo" width="30" height="24" class="logo">
+        <span class="brand-text">Mary</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <div class="profile-header">Marystela</div>
+        <div class="profile-info mt-3">
+          <p><strong>Occupation:</strong> Sales Manager</p>
+          <p><strong>Location:</strong> Copenhagen, Denmark</p>
+          <p><strong>Age:</strong> 44</p>
+          <p><strong>Family:</strong> Married, 2 children</p>
+        </div>
+
+        <h5 class="mt-4">Biography</h5>
+        <p>Alma and her husband have 2 kids: a teenager and a 9-year-old...</p>
+
+        <h5 class="mt-4">Needs</h5>
+        <p>- Be ready for holiday family gatherings as well as for light dinner during the day.</p>
+        <p>- Find balance between feeling good about herself, being able to maintain her lifestyle, while contributing
+          with the world.</p>
+
+        <h5 class="mt-4">Pain Points</h5>
+        <p>Alma needs to find flexible solutions that can help her to optimize...</p>
+
+        <h5 class="mt-4">Tech</h5>
+        <div class="tech-skill">
+          <p>Internet</p>
+          <div class="tech-bar" style="width: 80%;"></div>
+        </div>
+        <div class="tech-skill">
+          <p>Social Media</p>
+          <div class="tech-bar" style="width: 60%;"></div>
+        </div>
+        <div class="tech-skill">
+          <p>Online Shopping</p>
+          <div class="tech-bar" style="width: 70%;"></div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6 text-center image-section">
+        <img src="image/nico.png" alt="Profile Image">
+        <p class="quote mt-3">"It is very important for me to have fresh, tasty products at hand."</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
