@@ -6,12 +6,18 @@
   <title>Profile Page</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
   <style>
     /* Estilos personalizados */
     body {
       background-color: #f3f0f0;
       color: rgb(0, 0, 0);
       font-family: Arial, sans-serif;
+    }
+
+    .container, .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .navbar {
@@ -22,7 +28,7 @@
       font-size: 1.7rem;
       color: #f3884a;
     }
-    
+
     .navbar-underline {
       width: 100%;
       background-color: #f3884a;
@@ -36,40 +42,58 @@
       color: #f3884a;
     }
 
-    .icon {
-      margin-right: 5px;
+    .profile-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .icon-occupation::before {
-      content: "🧑‍💼";
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 1 48%;
+      margin-bottom: 10px;
     }
 
-    .icon-location::before {
-      content: "📍";
+    .info-item i {
+      font-size: 2rem;
+      color: #f3884a;
+      margin-bottom: 5px;
     }
 
-    .icon-age::before {
-      content: "🎂";
+    .col-lg-3 .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px; /* Limite máximo para a largura da imagem */
+      margin: 0 auto;
     }
 
-    .icon-family::before {
-      content: "🏠";
+    .col-lg-3 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
     .quote {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para contraste */
+      padding: 5px 10px;
+      border-radius: 5px;
       font-style: italic;
-      color: #000;
-      margin-top: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+      width: 90%;
     }
 
     .section-title {
       color: #f3884a;
       font-size: 1.2rem;
       margin-top: 15px;
-    }
-
-    .col-lg-3 img {
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -91,14 +115,34 @@
   <!-- Conteúdo Principal -->
   <div class="container py-5">
     <div class="row">
-
       <!-- Coluna Esquerda -->
       <div class="col-lg-4">
-        <div class="profile-header">Marystela</div>
+        <div class="profile-header">Marystela Suzana de Oliveira</div>
         <div class="profile-info mt-3">
-          <p><strong><i class="icon icon-occupation"></i> Ocupação:</strong> Cartorária</p>
-          <p><strong><i class="icon icon-location"></i> Cartório:</strong> 14º Ofício de Niterói</p>
-          <p><strong><i class="icon icon-location"></i> Escritório:</strong> Icaraí - Niterói RJ</p>
+          <div class="info-item">
+            <i class="bi bi-briefcase"></i>
+            <div>
+              <strong>Ocupação:</strong><br>Cartorária
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <strong>Cartório:</strong><br>14º Ofício de Niterói
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-house-door"></i>
+            <div>
+              <strong>Escritório:</strong><br>Icaraí - Niterói RJ
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-person"></i>
+            <div>
+              <strong>Idade:</strong><br>44 anos
+            </div>
+          </div>
         </div>
       </div>
 
@@ -117,14 +161,16 @@
           na pesquisa jurídica, além de dar suporte em reuniões e audiências, garantindo que as demandas sejam tratadas
           de forma ágil e eficaz. </p>
       </div>
+
       <!-- Coluna Direita (Imagem e Citação) -->
       <div class="col-lg-3 text-center">
-        <img src="image/nico.png" alt="Profile Image" class="img-fluid rounded">
-        <p class="quote">"Justiça não é apenas cumprir a lei, mas buscar a verdade e promover a equidade para todos."
-        </p>
+        <div class="image-container">
+          <img src="image/nico.png" alt="Profile Image" class="img-fluid rounded">
+          <p class="quote">"Justiça não é apenas cumprir a lei, mas buscar a verdade e promover a equidade para todos."
+          </p>
+        </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
